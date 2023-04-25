@@ -4,6 +4,7 @@ import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 
+import com.gedalias.config.BoostrapConfig;
 import org.glassfish.grizzly.http.server.HttpServer;
 
 import org.junit.jupiter.api.AfterEach;
@@ -19,7 +20,7 @@ public class UserResourceTest {
     @BeforeEach
     public void setUp() {
         // start the server
-        server = Main.startServer();
+        server = BoostrapConfig.startServer();
         // create the client
         Client c = ClientBuilder.newClient();
 
@@ -29,7 +30,7 @@ public class UserResourceTest {
         // --
         // c.configuration().enable(new org.glassfish.jersey.media.json.JsonJaxbFeature());
 
-        target = c.target(Main.BASE_URI);
+        target = c.target(BoostrapConfig.getHost());
     }
 
     @AfterEach

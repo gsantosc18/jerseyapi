@@ -30,6 +30,17 @@
             <groupId>org.glassfish.jersey.inject</groupId>
             <artifactId>jersey-hk2</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>${snakyaml.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
 
         <!-- uncomment this to get JSON support:
          <dependency>
@@ -86,5 +97,7 @@
         <junit-jupiter.version>5.9.2</junit-jupiter.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <surefire.mvn.plugin.version>3.0.0-M7</surefire.mvn.plugin.version>
+        <lombok.version>1.18.26</lombok.version>
+        <snakyaml.version>2.0</snakyaml.version>
     </properties>
 </project>
