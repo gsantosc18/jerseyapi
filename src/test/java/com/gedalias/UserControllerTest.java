@@ -12,7 +12,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class UserResourceTest {
+public class UserControllerTest {
 
     private HttpServer server;
     private WebTarget target;
@@ -42,8 +42,8 @@ public class UserResourceTest {
      * Test to see that the message "Got it!" is sent in the response.
      */
     @Test
-    public void testGetIt() {
+    public void testGetAll() {
         String responseMsg = target.path("user").request().get(String.class);
-        assertEquals("Got it!", responseMsg);
+        assertEquals("[]", responseMsg);
     }
 }
